@@ -1,0 +1,90 @@
+/* style.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #e0e0e0; /* soft gray background */
+  color: #333;
+  line-height: 2; /* increased for more spaciousness */
+}
+
+main#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+section.cube {
+  min-height: 100vh;
+  padding: 60px 20px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 4px solid #aaa; /* thick border */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+p,
+li {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin-bottom: 25px; /* extra space between lines */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: "•";
+  color: #777;
+  margin-right: 10px;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px 0;
+  padding-left: 15px;
+  border-left: 4px solid #ccc;
+  max-width: 600px;
+}
+
+/* Calendly embed responsiveness */
+.calendly-inline-widget {
+  width: 100%;
+  max-width: 700px;
+  scale: 1.2;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p,
+  li {
+    font-size: 1em;
+  }
+
+  section.cube {
+    padding: 40px 15px;
+    margin: 20px auto;
+  }
+}
